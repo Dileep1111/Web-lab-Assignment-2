@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="ngOughts">
+<head>
+    <title>Tut</title>
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+<body ng-controller="BoardCtrl">
+<div class="row" align="center">
+    <header><b>Tic Tac Toe Game</b></header>
+
+</div>
+<div align="center">
+    <h1 aria-dropeffect="popup" style=" color: #81d5fa; font-size: 50px; background-color: #fcfaff" ng-show="board.won" ng-cloak>Game Over : Player {{board.winning_marker}} won the game!!!</h1>
+    <!-- Display when a game is over and a player has won-->
+</div>
+<div  align="center">
+    <table align="center">
+        <tr ng-repeat="row in board.grid">
+            <td ng-repeat="cell in row" ng-click="board.playCell(cell)" ng-class="{'winning': cell.winning}">
+                <span ng-bind="cell.marker"></span>
+            </td>
+        </tr>
+    </table>
+    <button style="color: green" ng-click="board.reset()">Restart</button>
+    <!--Restart Button , trigger event for a new game-->
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
