@@ -1,0 +1,13 @@
+body { background: rgba(44, 57, 45, 0.6); }
+b {font-family: Impact; }
+header { margin-top: 50px; }
+h2 { margin-top: 50px; color: white }
+header a { color: #ff1e1e; text-decoration: none; }
+header a:hover { text-decoration: none; }
+form { margin-top: 20px; }
+form, #results { padding: 0 20px; }
+.item { margin-bottom: 25px; }
+.w100 { width: 100%; }
+
+.btn-primary { background: black; border-color: white; }
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus { background: #2f2b4b;  border-color: #eeeef0; }
